@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import RegistrationForm
 from django.contrib import messages
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -34,7 +35,7 @@ def new(request):
         phone2s = request.POST['phone2']
         emails = request.POST['email']
 
-        details = RegistrationForm(
+        details = Registration(
             firstname = fname,
             lastname = lname,
             Date_of_birth = Dob,
@@ -48,11 +49,11 @@ def new(request):
             email = emails
         )
         details.save()
-        chats = RegistrationForm.objects.all()
+        chats = Registration.objects.all()
         print(chats)
         messages.success(request, ("Form has been submitted successfully!"))  
             
 
-        return render(request, 'new.html')#{'messages':messages})
+        return render(request, 'new.html')
     else:
         return render(request,'new.html')

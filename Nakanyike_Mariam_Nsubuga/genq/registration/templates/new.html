@@ -4,19 +4,15 @@
 {% bootstrap_css %}
     {% bootstrap_javascript %}
 {% block content %}
-<head >
-<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-</script>
-</head>
+
+
 <body>
+    <div class="container">
 <form action="{% url 'new' %}" method="POST" class="form-control" enctype="multipart/form-data">
     {% csrf_token %}
     <h1 style="text-align: center; background-color: black; color: white;">GENQ KYC FORM</h1>
-    <h2>Bio Data</h2>
+    <br><br>
+    <h1>Bio Data</h1>
     <hr >
     <div class="container-fluid">
         <div class="col-md-12 row">
@@ -39,7 +35,7 @@
             </div>
         </div>
     </div>
-    <hr>
+    <br><br>
     <div class="col-md-12 row" style="margin: 5px;"></div>
     <h1>Location</h1>
     <hr >
@@ -67,8 +63,9 @@
             </div>
         </div>
     </div>
+    <br><br>
     <div class="col-md-12 row" style="margin: 5px;"></div>
-    <h2>Contacts and Address</h2>
+    <h1>Contacts and Address</h1>
     <hr>
     <div class="container-fluid">
         <div class="col-md-12 row">
@@ -87,7 +84,7 @@
         <div class="col-md-12 row">
             <div class="col-md-6"></div>
             <div class="row">
-                <button class="col-md-12 btn btn-success" type="submit">Submit</button>
+                <button style="background-color: orange; "class="col-md-12 btn btn-success" type="submit">Submit</button>
             </div>
         </div>
     </div>
@@ -95,5 +92,6 @@
 
 
 {% endblock %}
+</div>
 </body>
 </html>
