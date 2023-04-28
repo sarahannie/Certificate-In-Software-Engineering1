@@ -1,33 +1,4 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-     
-   <!-- myform.html -->
-   <body style="background-color: lightblue;">
-        <form class="signup-form" method="post" action="{% url 'aboutForm' %}" id="myform" style="align-items: center;">
-          <div class="frm" style="align-items: center;"> 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="nickname">Nickname:</label>
-            <input type="text" id="nickname" name="nickname" required>
-            <br>
-            <label for="status">Marital Status:</label>
-            <input type="text" id="status" name="status" required>
-            <br>
-            <label for="hobby">Hobby:</label>
-            <input type="text" id="hobby" name="hobby" required>
-            <br>
-            <label for="color">Favorite Color:</label>
-            <input type="text" id="color" name="color" required>
-            <input type="submit" value="Submit" id="submitbtn">
-          </div>
-       </form>
-    </body>
 {% endblock%}
