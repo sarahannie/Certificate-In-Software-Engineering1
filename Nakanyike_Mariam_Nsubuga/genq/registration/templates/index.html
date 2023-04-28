@@ -1,0 +1,238 @@
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+    {% bootstrap_javascript %}
+{% block content %}
+<head >
+
+	
+	
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+</head>
+ <div>
+    
+    <br> 
+    <div class="container">
+        <form action= "" method="POST" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="container1">
+            <header>GENQ KYC FORM</header>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Bio Data</label>
+           
+        </div>
+        <hr>
+        <form>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+               
+                <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name"  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                
+                <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name"  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                
+                <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Date of Birth"  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+              
+                <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Gender"  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+           
+            </div>
+            
+            <div class="form-group row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">location </label>
+               
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                 
+                  <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Country"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                 
+                  <input type="text" class="form-control is-valid" id="validationServer02" placeholder="State/District"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                  <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Town"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                  <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Zip Code"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+               
+              </div>           
+              <div class="form-row">
+              <div class="col-md-6 mb-3">
+               
+                <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+               
+                <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                
+                <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>
+            <br> <br>
+            <div class="form-group row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Contacts and Address </label>
+               
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                 
+                  <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Phone Number 1"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                 
+                  <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Phone Number 2"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+
+                  <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Email"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                
+               
+              </div>
+           
+              <br>
+            
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </form>
+        <!-- <div class="form-row">
+            <div>
+            <div class="col-md-4 mb-2">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="First name"  required>
+              <div class="valid-feedback">
+                Enter your first Name here
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                <div class="valid-feedback">
+                  Enter your Last Name here
+                </div>
+            </div>
+            <div class="form1">
+                <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="exampleInputPassword1" required>
+            </div>
+        </div> 
+        </form>
+        </div>
+        <div class="mb-3">
+            
+            <div class="mb-3">
+            <select class="form-select" aria-label="Default select example" required>
+                <option selected>Select title</option>
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+                <option value="3">Miss</option>
+                <option value="3">Dr.</option>
+                <option value="3">Eng.</option>
+
+              </select>
+            </div>
+            <br> 
+            <div class="form-check form-check-inline" required>
+                <input class="form-check-input" type="radio" id="flexRadioDefault1" value="option1">
+                <label class="form-check-label" for="flexRadioDefault1">Male</label>
+              </div>
+              <div class="form-check form-check-inline" required>
+                <input class="form-check-input" type="radio" id="flexRadioDefault2" value="option2">
+                <label class="form-check-label" for="flexRadioDefault2">Female</label>
+              </div>
+              <br> <br>
+              <div class="form1">
+                <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              <div class="form1">
+                <label for="exampleInputPassword1" class="form-label">Country</label>
+                <select class="form-select" aria-label="Default select example" required>
+                    <option selected>Select Country</option>
+                    <option value="1">Uganda</option>
+                    <option value="2">Rwanda</option>
+                    <option value="3">Kenya</option>
+                    <option value="3">Tanzania</option>
+                    <option value="3">Burundi</option>
+                  </select>
+                </div>
+                <br> <br>
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Residence</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nationality</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>-->
+
+{% endblock %} 
