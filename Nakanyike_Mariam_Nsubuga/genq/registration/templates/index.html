@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<br><br><br><br>
+<div class="container">
+  <div class="container1">
+    <header>GENQ KYC FORM</header>
+</div>
+<div id="pagecontent" class="container-fluid">
+  {% if messages %}
+  <div id="flash_message" class="container-fluid">
+      <ul class="messages">
+          {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+              <p class="messages">{{message}}</p>
+          </li>
+          {% endfor %}
+
+      </ul>
+      <button class="btn btn-outline-danger" id="btn1" onclick="hide('flash_message')">Close</button>
+  </div>
+  {% endif %}
+<br><br>
+    
+    <form action="{% url 'reg' %}" method="POST" enctype="multipart/form-data">
+      
+        {% csrf_token %}
+        <h4>Bio data</h4><hr>
+        <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" placeholder="First name" required/>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" placeholder="Last name" required/>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="date" id="form3Example1" class="form-control" placeholder="Date of birth" required/>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <select class="form-select" aria-label="Default select example" required>
+                  <option selected>Male</option>
+                  <option value="1">Female</option>
+
+              </select>
+              </div>
+            </div>
+          </div>
+          <br><h4>Location</h4>
+          <hr>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <select class="form-select" aria-label="Default select example" required>
+                  <option selected>Uganda</option>
+                  <option value="1">Kenya</option>
+                  <option value="2">Tanzania</option>
+                  <option value="3">Rwanda</option>
+                  <option value="3">Burundi</option>
+              </select>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" placeholder="State/district" required/>
+
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" placeholder="Town" required/>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="number" id="form3Example2" class="form-control" placeholder="Zipcode" required/>
+
+              </div>
+            </div>
+          </div>
+          <br><h4>Contacts and Address</h4>
+          <hr>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" placeholder="Phone number 1" required/>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" placeholder="Phone number 2" required/>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form">
+            <input type="email" class="form-control" required placeholder="Email" required>
+          </div>
+        <br><br>
+        <button type="submit" class="btn " id="btn">Submit</button>
+      </form>
+      <br><br><br><br>
+</div>
+
+{% endblock %}
